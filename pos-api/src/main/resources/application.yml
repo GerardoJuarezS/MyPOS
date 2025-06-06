@@ -5,7 +5,7 @@ server:
 # Database configuration
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/posdb
+    url: jdbc:postgresql://localhost:5432/posDb
     username: postgres
     password: 2025
 
@@ -33,3 +33,10 @@ springdoc:
   swagger-ui:
     url: "/v3/api-docs"
     path: "/swagger-ui.html"
+
+
+# Logging configuration
+logging:
+  level:
+    org.springframework.orm.jpa: DEBUG
+    org.hibernate: ERROR
