@@ -1,0 +1,35 @@
+# Server configuration
+server:
+  port: 8080
+
+# Database configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/posdb
+    username: postgres
+    password: 2025
+
+  # JPA / Hibernate configuration
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # Security configuration
+  security:
+    user:
+      name: admin
+      password: secret123
+
+# OpenAPI / Swagger UI configuration
+springdoc:
+  openapi:
+    urls:
+      - name: "POS API"
+        url: "/v3/api-docs"
+  swagger-ui:
+    url: "/v3/api-docs"
+    path: "/swagger-ui.html"
